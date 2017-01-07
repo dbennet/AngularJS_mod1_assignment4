@@ -9,7 +9,8 @@ MenuDataController.$inject = ['MenuDataService'];
 function MenuDataController(MenuDataService) {
   var md = this;
 
-  md.categories = MenuDataService.getAllCategories();
+  var response = MenuDataService.getAllCategories();
+  md.categories = response.data;
   
   console.log(md.categories);
   md.items = MenuDataService.getItemsForCategory();
