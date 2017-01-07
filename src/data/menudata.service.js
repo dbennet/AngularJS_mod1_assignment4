@@ -6,7 +6,7 @@ angular.module('Data')
 
 
 MenuDataService.$inject = ['$http'];
-function MenuDataService('$http') {
+function MenuDataService($http) {
   var service = this;
 
     service.getAllCategories = function () {
