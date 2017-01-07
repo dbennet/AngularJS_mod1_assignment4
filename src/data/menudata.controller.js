@@ -10,6 +10,8 @@ function MenuDataController(MenuDataService) {
   var md = this;
 
   md.categories = MenuDataService.getAllCategories();
+  
+  console.log(md.categories);
   md.items = MenuDataService.getItemsForCategory();
   
 }
