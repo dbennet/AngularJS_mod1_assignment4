@@ -9,11 +9,8 @@ MenuDataController.$inject = ['MenuDataService'];
 function MenuDataController(MenuDataService) {
   var md = this;
 
-  // Use factory to create new shopping list service
-  var menuData = MenuDataService();
-
-  md.categories = menuData.getAllCategories();
-  md.items = menuData.getItemsForCategory();
+  md.categories = MenuDataService.getAllCategories();
+  md.items = MenuDataService.getItemsForCategory();
   
 }
 
