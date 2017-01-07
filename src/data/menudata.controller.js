@@ -9,8 +9,16 @@ MenuDataController.$inject = ['MenuDataService'];
 function MenuDataController(MenuDataService) {
   var md = this;
 
-  var response = MenuDataService.getAllCategories();
-  md.categories = response.data;
+  var promise = MenuDataService.getAllCategories();
+  
+    promise.then(function (response) {
+      md.categories = response.data;     
+    })
+    .catch(function (error) {
+        console.log("Something went terribly wrong.");
+        md.categories = [];
+    });
+  
   
   console.log(md.categories);
   md.items = MenuDataService.getItemsForCategory();
