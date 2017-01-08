@@ -32,9 +32,15 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
   })
   
   .state('menuItems', {
-    url: '/menu-items',
+    url: '/item-items/{itemName}',
     templateUrl: 'src/menu/menuitems.template.html',
-    controller: 'MenuDataController as md'
+    controller: 'MenuItemController as mt',
+    resolve: {
+      item: ['$stateParams', 'MenuItemService',
+            function ($stateParams, MenuItemService) {
+              return MenuItemService.getItemsForCategory($stateParams.itemName);
+            }]
+    }
   });
   
   }

@@ -2,14 +2,17 @@
 'use strict';
 
 angular.module('Data')
-.controller('MenuDataController', MenuDataController);
+.controller('MenuItemController', MenuItemController);
 
 
 //MenuDataController.$inject = ['MenuDataService'];
+
+
+
 MenuDataController.$inject = ['items'];
-function MenuDataController(items) {
-  var md = this;
-  md.categories = items;
+function MenuItemController(items) {
+  var mt = this;
+  mt.items = items;
 
    //var promise = MenuDataService.getAllCategories();
   
