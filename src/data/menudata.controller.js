@@ -11,7 +11,7 @@ function MenuDataController(items) {
   var md = this;
   console.log("here are the items");
   console.log(items);
-  md.categories = items;
+  md.categories = items.data;
 
    //var promise = MenuDataService.getAllCategories();
   
