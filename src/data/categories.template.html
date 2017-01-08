@@ -1,8 +1,8 @@
 <h3>Categories</h3>
 <ol>
-  <li ng-repeat="item in $ctrl.categories">
+  <li ng-repeat="item in $ctrl.categories"
    ui-sref="menuItems({itemName: item.short_name})">
-   {{ item.name }} , {item.short_name}
+   {{ item.name }} , {{item.short_name}}
   </li>
 </ol>
 
