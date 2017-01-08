@@ -9,6 +9,8 @@ angular.module('Data')
 MenuDataController.$inject = ['items'];
 function MenuDataController(items) {
   var md = this;
+  console.log("here are the items");
+  console.log(items);
   md.categories = items;
 
    //var promise = MenuDataService.getAllCategories();

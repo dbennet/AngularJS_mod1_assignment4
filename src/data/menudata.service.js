@@ -15,7 +15,8 @@ function MenuDataService($http) {
           url: "https://davids-restaurant.herokuapp.com/categories.json"
         });
 
-        console.log("Here is the response for categories.json" + response);
+        console.log("Here is the response for categories.json");
+        console.log(reponse); 
         return response;
     };
  
