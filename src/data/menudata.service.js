@@ -16,7 +16,7 @@ function MenuDataService($http) {
         });
 
         console.log("Here is the response for categories.json");
-        console.log(reponse); 
+        console.log(response); 
         return response;
     };
  
